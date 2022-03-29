@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --clr-btn-white: rgb(234, 226, 219);
+  --clr-primary: #3b4664;
+  --clr-btn-red: #d03e2f;
+  --clr-screen: #181f32;
+  --clr-keypad: #232c41;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    font-family: 'Montserrat',sans-serif;
+    background-color: var(--clr-primary);
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+.calc-container h2{
+    margin-block: 1rem;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+}
+
+.calc-container input[type=text]{
+    background-color: var(--clr-screen);
+    padding: 2.5rem 2rem;
+    border: none;
+    border-radius: 6px;
+    caret-color: white;
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    cursor: default;
+    text-align: right;
+    width: 100%;
+}
+
+.calc-container{
+    width: min(100%,50rem);
+}
+
+.calc-container input[type=text]:focus{
+    outline: none;
+}
+
+.keypad-container{
+    background-color: var(--clr-keypad);
+    margin-block: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1.5rem;
+    gap:1.5rem;
+    border-radius: 6px;
+}
+
+.calc-btn{
+    background-color: var(--clr-btn-white);
+    font:700 2.4rem "Montserrat",sans-serif;
+    padding-block: 1rem;
+    border-radius: 6px;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    
+}
+
+.calc-btn:active{
+    background-color:rgb(234, 226, 219,0.8) ;
+}
+
+.calc-btn:nth-last-child(1), .calc-btn:nth-last-child(2){
+    grid-column: span 2;
+}
+
+.calc-btn:last-child{
+    background-color: var(--clr-btn-red);
+    color: white;
+}
+
+.calc-btn:last-child:active{
+    background-color: rgb(208, 62, 47,0.8);
+}
+
+.calc-btn:nth-child(4) , .calc-btn:nth-last-child(2){
+    color: white;
+    background-color: #647198;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.calc-btn:nth-child(4):active ,.calc-btn:nth-last-child(2):active{
+    background-color: rgb(59, 70, 100,0.8);
+}
