@@ -110,3 +110,9 @@ body{
 .calc-btn:nth-child(4):active ,.calc-btn:nth-last-child(2):active{
     background-color: rgb(59, 70, 100,0.8);
 }
+
+footer{
+    font-size:1.6rem;
+    margin-top: auto;
+    padding-bottom: 3rem;
+}
